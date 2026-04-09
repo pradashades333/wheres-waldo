@@ -11,13 +11,13 @@ module.exports = {
     },
 
     getImage: async (req, res, next) => {
-    try {
-        const image = await prisma.image.findUnique({
-        where: { id: parseInt(req.params.id) },include: {characters: {select: { id: true, name: true }}}});
-        res.json(image);
-    } catch (err) {
-        next(err)
-    }
+        try {
+            const image = await prisma.image.findUnique({
+            where: { id: parseInt(req.params.id) },include: {characters: {select: { id: true, name: true }}}});
+            res.json(image);
+        } catch (err) {
+            next(err)
+        }
     },
 
 
