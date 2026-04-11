@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const imagesRouter = require('./routes/images');
+const scoresRouter = require('./routes/scores');
 
 const app = express();
 

@@ -6,3 +6,5 @@ router.get('/', controller.getAllImages)
 router.get('/:id/characters', controller.getImage)
 
 router.post('/:id/check', controller.checkClick)
+
+module.exports = router;

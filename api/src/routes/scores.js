@@ -4,3 +4,5 @@ const controller = require("../controllers/scoresController");
 
 router.get('/:imageId', controller.getLeaderboard)
 router.post('/', controller.saveScore)
+
+module.exports = router;
