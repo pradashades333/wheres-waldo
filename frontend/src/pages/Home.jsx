@@ -13,18 +13,12 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h1 className="home-title">Where's Waldo</h1>
-      
-      <div className="level-grid">
+      <h1 className="home-title">Wheres Waldo</h1>
+      <div className="level-list">
         {images.map((image) => (
-          <Link to={`/game/${image.id}`} key={image.id} className="level-card">
-            <div className="level-image-wrapper">
-              <img src={image.url} alt={image.name} className="level-image" />
-            </div>
-            <div className="level-info">
-              <h2 className="level-name">{image.name}</h2>
-              <span className="play-button">Play Level</span>
-            </div>
+          <Link to={`/game/${image.id}`} key={image.id} className="level-item">
+            <img src={image.url} alt={image.name} className="level-image" />
+            <h2 className="level-name">{image.name}</h2>
           </Link>
         ))}
       </div>

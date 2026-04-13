@@ -1,86 +1,31 @@
 .home-container {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  background-color: #f8f9fa;
-  min-height: 100vh;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
 .home-title {
-  font-size: 3rem;
-  color: #c62828; /* Waldo Red */
-  margin-bottom: 40px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-.level-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px;
-  padding: 20px;
-}
-
-.level-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  text-decoration: none;
+.level-list {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-.level-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-}
-
-.level-image-wrapper {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
+.level-item {
+  border: 1px solid black;
+  padding: 10px;
+  width: 300px;
+  text-decoration: none;
+  color: black;
 }
 
 .level-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.level-card:hover .level-image {
-  transform: scale(1.1);
-}
-
-.level-info {
-  padding: 20px;
-  background: white;
 }
 
 .level-name {
-  margin: 0;
-  font-size: 1.5rem;
-  color: #333;
-  font-weight: 600;
-}
-
-.play-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 8px 24px;
-  background-color: #1a73e8;
-  color: white;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: background-color 0.2s;
-}
-
-.level-card:hover .play-button {
-  background-color: #1557b0;
+  margin: 10px 0;
 }
