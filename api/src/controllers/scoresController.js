@@ -14,11 +14,11 @@ module.exports = {
         try {
             const {playerName, time} = req.body
             const {imageId} = req.params
-            const score = await prisma.score.create({data: { playerName, time, imageId: parseInt(imageId) }})
+            const score = await prisma.score.create({ta: { playerName, time, imageId: parseInt(imageId) }})
             res.json(score)
         } catch(err){
             next(err)
         }
     }
-
+ 
 }

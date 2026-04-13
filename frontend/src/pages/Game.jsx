@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import './Game.css';
 
 function Game() {
   const { id } = useParams();
@@ -57,34 +58,31 @@ function Game() {
         });
     };
 
-  if (!gameData) return <div>Loading...</div>;
+  if (!gameData) return <div className="loading-screen">Loading...</div>;
 
   return (
-    <div>
-      <h1>Find the Characters</h1>
+    <div className="game-page">
+      <h1 className="game-title">Find the Characters</h1>
       
-      <div style={{ position: 'relative', display: 'inline-block' }}>
+      <div className="image-container">
         <img 
           src={gameData.url} 
           alt="Game Level" 
           onClick={handleImageClick} 
-          style={{ cursor: 'crosshair' }}
+          className="game-image"
         />
 
         {showDropdown && (
-          <div style={{ 
-            position: 'absolute', 
+          <div className="character-dropdown" style={{ 
             top: coords.y, 
-            left: coords.x, 
-            backgroundColor: 'white', 
-            border: '1px solid black' 
+            left: coords.x,
           }}>
-            <ul style={{ listStyle: 'none', margin: 0, padding: '5px' }}>
+            <ul className="character-list">
               {gameData.characters.map((char) => (
                 <li 
                   key={char.id} 
                   onClick={() => handleCharacterSelect(char.id)}
-                  style={{ cursor: 'pointer', padding: '5px' }}
+                  className="character-item"
                 >
                   {char.name}
                 </li>
@@ -97,4 +95,4 @@ function Game() {
   );
 }
 
-export default Game;
+export default Game;
