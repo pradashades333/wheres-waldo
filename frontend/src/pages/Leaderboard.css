@@ -1,0 +1,27 @@
+.leaderboard-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.leaderboard-title {
+  margin-bottom: 20px;
+}
+
+.leaderboard-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+}
+
+.leaderboard-table th, 
+.leaderboard-table td {
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.leaderboard-table th {
+  background-color: #eee;
+}

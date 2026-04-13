@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import './Leaderboard.css';
 
 function Leaderboard() {
   const { imageId } = useParams();
@@ -12,9 +13,9 @@ function Leaderboard() {
   }, [imageId]);
 
   return (
-    <div>
-      <h1>Leaderboard</h1>
-      <table>
+    <div className="leaderboard-container">
+      <h1 className="leaderboard-title">Leaderboard</h1>
+      <table className="leaderboard-table">
         <thead>
           <tr>
             <th>Rank</th>
