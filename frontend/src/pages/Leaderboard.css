@@ -1,27 +1,62 @@
 .leaderboard-container {
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  padding: 60px 20px;
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
 .leaderboard-title {
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .leaderboard-table {
-  margin: 0 auto;
+  width: 100%;
   border-collapse: collapse;
-  width: 80%;
-  max-width: 600px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
 }
 
 .leaderboard-table th, 
 .leaderboard-table td {
-  border: 1px solid black;
-  padding: 10px;
+  padding: 15px 20px;
   text-align: center;
 }
 
 .leaderboard-table th {
-  background-color: #eee;
+  background-color: #f1f3f4;
+  color: var(--text-main);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.leaderboard-table td {
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.leaderboard-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.leaderboard-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.leaderboard-table td:first-child {
+  font-weight: 700;
+  color: var(--secondary);
 }
